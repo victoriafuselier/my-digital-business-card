@@ -124,11 +124,8 @@ p {
 }
 
 .profile-pic {
-    height: 153px;
-    border: none;
-    border-radius: 10px;
-    margin: 0 10px 0;
-}   
+    display: none;
+}
 
 #logo {
     height: 25px;
@@ -136,7 +133,7 @@ p {
 }
 
 .social-icons {
-    height: 20px;
+    height: 30px;
     fill: var(--dark-blue);
 }
 
@@ -183,7 +180,7 @@ p {
 .social-links {
     color: grey;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     transition: all 1s ease;
     margin-left: 5px;
@@ -203,14 +200,9 @@ p {
 
 .social-link-containers:hover,
 .social-link-containers:focus,
-.social-link-containers:active,
-.design-container:hover,
-.design-container:focus,
-.design-container:active {
+.social-link-containers:active {
     background-color: var(--yellow);
 }
-
-
 
 .front-content-box,
 .back-content-box {
@@ -228,22 +220,6 @@ p {
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
-}
-
-.design-container {
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    height: 30%;
-}
-
-.design-container-text {
-    margin-left: 15px;
-}
-
-.floral-designs {
-    height: 100px;
-    width: auto;
 }
 
 #qr-container {
@@ -295,6 +271,15 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+
+    .profile-pic {
+        display: block;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        margin: 0 10px 0;
+    }
+
     .card {
         height: 320px;
         width: 620px;
@@ -316,19 +301,12 @@ p {
     }
 
     .social-links {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .social-icons-wrapper {
         margin-top: 0;
         width: 40%;
-    }
-
-    .design-container {
-        flex-direction: column;
-        text-align: center;
-        margin-left: 0;
-        height: 100%;
     }
 
     .front-flip-btn {
@@ -343,10 +321,6 @@ p {
         right: 7px;
         width: 15px;
         height: 15px;
-    }
-
-    .floral-designs {
-        height: 80px;
     }
 
     #qr-container {
@@ -391,9 +365,5 @@ p {
         width: 97%;
         margin: 0 auto;
         padding: 5px;
-    }
-
-    .profile-pic {
-        height: 155px;
     }
 }
