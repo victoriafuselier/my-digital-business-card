@@ -128,7 +128,7 @@ p {
 
 #logo,
 .social-icons {
-    height: 25px;
+    height: 20px;
     margin-right: 7px;
 }
 
@@ -285,5 +285,10 @@ p {
         width: 95%;
         margin: 0 auto;
         padding: 5px;
+    }
+
+    #logo,
+    .social-icons {
+        height: 25px;
     }
 }
