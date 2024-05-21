@@ -55,6 +55,18 @@ body {
     transform: rotateY(180deg);
 }
 
+.card-inner.isFlipped.front-flip-btn {
+    display: none;
+}
+
+.card-inner.isFlipped.back-flip-btn {
+    display: block;
+}
+
+.back-flip-btn {
+    display: none;
+}
+
 .card-face {
     position: absolute;
     width: 100%;
@@ -95,7 +107,7 @@ body {
 }
 
 h1 {
-    font-size: 37px;
+    font-size: 34px;
     text-transform: uppercase;
 }
 
@@ -117,7 +129,7 @@ h3 {
 }
 
 p {
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .back-header-text {
