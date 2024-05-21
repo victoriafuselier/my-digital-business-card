@@ -55,18 +55,6 @@ body {
     transform: rotateY(180deg);
 }
 
-.card-inner.isFlipped.front-flip-btn {
-    display: none;
-}
-
-.card-inner.isFlipped.back-flip-btn {
-    display: block;
-}
-
-.back-flip-btn {
-    display: none;
-}
-
 .card-face {
     position: absolute;
     width: 100%;
@@ -107,12 +95,12 @@ body {
 }
 
 h1 {
-    font-size: 34px;
+    font-size: 33px;
     text-transform: uppercase;
 }
 
 #front-face p {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -146,7 +134,7 @@ p {
 }
 
 .social-icons {
-    height: 30px;
+    height: 25px;
     fill: var(--dark-blue);
 }
 
@@ -322,7 +310,7 @@ p {
         width: 40%;
     }
 
-    .front-flip-btn {
+    /* .front-flip-btn {
         bottom: 12px;
         right: 10px;
         height: 30px;
@@ -334,7 +322,7 @@ p {
         right: 7px;
         width: 15px;
         height: 15px;
-    }
+    } */
 
     #qr-container {
         height: 100%;
