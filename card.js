@@ -6,8 +6,10 @@ const backFlipBtn = document.querySelector('.back-flip-btn');
 for (let i=0; i<flipBtns.length; i++) {
     flipBtns[i].addEventListener('click', function() {
         card.classList.toggle('isFlipped');
-        frontFlipBtn.classList.toggle('hidden');
-        backFlipBtn.classList.toggle('hidden');
+        setTimeout(()=> {
+            frontFlipBtn.classList.toggle('hidden');
+            backFlipBtn.classList.toggle('hidden');
+        }, 500);
     });
 }
 
