@@ -18,7 +18,7 @@
 }
 
 :focus-visible {
-    outline-color: rgb(166, 0, 255);
+    outline-color: rgb(62, 12, 88);
     outline-offset: 3px;
     outline-width: 5px;
     outline-style: double;
@@ -73,12 +73,13 @@ body {
 .card-content {
     width: 100%;
     height: 100%;
-    padding: 25px;
+}
+
+#back-face .card-content {
+    padding: 20px;
 }
 
 #front-face .card-content {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +91,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
 }
 
 h1 {
@@ -112,7 +112,6 @@ h2 {
 
 h3 {
     font-size: 15px;
-    margin-bottom: 20px;
 }
 
 p {
@@ -127,33 +126,14 @@ p {
     display: none;
 }
 
-#logo {
+#logo,
+.social-icons {
     height: 25px;
-    margin-right: 10px;
+    margin-right: 7px;
 }
 
 .social-icons {
-    height: 25px;
     fill: var(--dark-blue);
-    margin-right: 5px;
-}
-
-
-.front-logo,
-.back-logo {
-    height: 35px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-
-.social-icons-wrapper {
-    margin-top: 10px;
-    width: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .social-links {
@@ -179,7 +159,7 @@ p {
     height: 50px;
     width: 100%;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 .social-link-containers:hover,
@@ -188,22 +168,22 @@ p {
     background-color: var(--yellow);
 }
 
-.front-content-box,
 .back-content-box {
     background-color: #FFFFFF;
     border-radius: 5px;
-    height: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px 10px;
 }
 
-.back-content-left {
+.link-div {
     width: 100%;
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
+    height: 70%;
 }
 
 #qr-container {
@@ -212,7 +192,7 @@ p {
     padding: 10px;
     display: flex;
     align-items: center;
-    height: 35%;
+    height: 30%;
     font-size: 12px;
 }
 
@@ -222,16 +202,14 @@ p {
     margin-right: 10px;
 }
 
-#qr-container p:first-of-type {
+#qr-container p {
     font-size: 12px;
-    margin-bottom: 10px;
     color: var(--dark-blue);
     font-family: 'Fira Sans Condensed', sans-serif;
     text-align: center;
 }
 
-.front-flip-btn,
-.back-flip-btn {
+.flip-btn {
     border-radius: 10px;
     background-color: var(--orange);
     border: none;
@@ -244,8 +222,7 @@ p {
     cursor: pointer;
 }
 
-.front-flip-icon,
-.back-flip-icon {
+.flip-icon {
     z-index: 2;
     position: absolute;
     bottom: 12px;
@@ -273,46 +250,24 @@ p {
     }
 
     .back-header {
-        height: 20%;
+        height: 30%;
     }
 
     .back-content-box {
-        height: 80%;
+        height: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .back-content-left {
-        width: 60%;
+    .link-div {
+        width: 45%;
+        height: 100%;
     }
-
-    .social-links {
-        font-size: 12px;
-    }
-
-    .social-icons-wrapper {
-        margin-top: 0;
-        width: 40%;
-    }
-
-    /* .front-flip-btn {
-        bottom: 12px;
-        right: 10px;
-        height: 30px;
-        width: 30px;
-    }
-
-    .front-flip-icon {
-        bottom: 8px;
-        right: 7px;
-        width: 15px;
-        height: 15px;
-    } */
 
     #qr-container {
         height: 100%;
-        width: 17%;
+        width: 20%;
         padding: 10px;
         flex-direction: column;
         justify-content: space-evenly;
@@ -325,30 +280,8 @@ p {
         margin-right: 0;
     }
 
-    #qr-container-text p {
-        margin-bottom: 0;
-    }
-
-    .back-header-left {
-        width: 36%;
-        justify-content: flex-end;
-    }
-
-    .back-header-right {
-        width: 40%;
-    }
-
     .social-link-containers {
         height: 30px;
-    }
-
-    .social-icons-large {
-        height: 25px;
-        width: 25px;
-    }
-
-    .social-link-containers {
-        height: 32px;
         width: 95%;
         margin: 0 auto;
         padding: 5px;
