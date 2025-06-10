@@ -18,17 +18,16 @@
 }
 
 :focus-visible {
-    outline-color: rgb(62, 12, 88);
-    outline-offset: 3px;
+    outline-color: var(--orange);
+    outline-offset: 5px;
     outline-width: 5px;
-    outline-style: double;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
     color: var(--white);
-    font-family: "Unica One", sans-serif;
+    font-family: "Quicksand", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,8 +35,8 @@ body {
 }
 
 .card {
-    width: 320px;
-    height: 620px;
+    width: 280px;
+    height: 490px;
     perspective: 600px;
 }
 
@@ -86,28 +85,20 @@ body {
     justify-content: center;
 }
 
-.back-header {
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 h1 {
     font-size: 33px;
-    text-transform: uppercase;
 }
 
 #front-face p {
     font-size: 16px;
     font-weight: 600;
+    margin-top: 2px;
 }
 
 h2 {
     font-weight: 600;
     letter-spacing: .5px;
     font-size: 25px;
-    text-transform: uppercase;
 }
 
 h3 {
@@ -118,40 +109,37 @@ p {
     font-size: 17px;
 }
 
-.back-header-text {
-    text-align: center;
-}
-
 .profile-pic {
     display: none;
 }
 
 #logo,
-.social-icons {
+.social-icon {
     height: 30px;
-    margin-right: 7px;
+    margin-right: 5px;
 }
 
-.social-icons {
+.social-icon {
     fill: var(--dark-blue);
 }
 
-.social-links {
+.social-link {
     border: none;
     height: fit-content;
     background-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--grey);
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
-    transition: all 1s ease;
-    text-transform: uppercase;
+    transition: background-color .3s ease;
     width: 100%;
+    padding: 5px;
 }
 
-.social-link-containers {
+.social-link-container {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -162,16 +150,16 @@ p {
     padding: 15px;
 }
 
-.social-link-containers:hover,
-.social-link-containers:focus,
-.social-link-containers:active {
+.social-link:hover,
+.social-link:focus,
+.social-link:focus-visible {
     background-color: var(--yellow);
 }
 
 .back-content-box {
     background-color: #FFFFFF;
     border-radius: 5px;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -199,14 +187,14 @@ p {
 #qr-code {
     height: 100px;
     width: 100px;
-    margin-right: 10px;
 }
 
 #qr-container p {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--dark-blue);
     font-family: 'Fira Sans Condensed', sans-serif;
     text-align: center;
+    padding: 10px;
 }
 
 .flip-btn {
@@ -220,6 +208,12 @@ p {
     height: 50px;
     width: 50px;
     cursor: pointer;
+    transition: scale .25 ease;
+}
+
+.flip-btn:hover,
+.flip-btn:focus-visible {
+    transform: scale(1.2);
 }
 
 .flip-icon {
@@ -249,12 +243,7 @@ p {
         width: 620px;
     }
 
-    .back-header {
-        height: 30%;
-    }
-
     .back-content-box {
-        height: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -280,7 +269,7 @@ p {
         margin-right: 0;
     }
 
-    .social-link-containers {
+    .social-link-container {
         height: 35px;
         width: 80%;
         margin: 0 auto;
@@ -288,7 +277,7 @@ p {
     }
 
     #logo,
-    .social-icons {
+    .social-icon {
         height: 25px;
     }
 }
