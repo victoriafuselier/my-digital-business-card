@@ -256,7 +256,7 @@ p {
 
     #qr-container {
         height: 100%;
-        width: 133px;
+        width: 200px;
         padding: 10px;
         flex-direction: column;
         justify-content: space-evenly;
